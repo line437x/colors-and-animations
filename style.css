@@ -1,0 +1,371 @@
+/* Resetter */
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+
+/* Colors */
+
+/* Light mode */
+:root {
+  --color-primary1: #fff;
+  --color-primary2: #f2f2f2;
+  --color-secondary1: #0f71f2;
+  --color-secondary2: #f2bc1b;
+  --color-accent1: #f24403;
+  --color-accent2: #f28706;
+}
+
+/* Dark mode example 1*/
+/* :root {
+  --color-primary1: #102c50;
+  --color-primary2: #030303;
+  --color-secondary1: #0f71f2;
+  --color-secondary2: #f2bc1b;
+  --color-accent1: #f24403;
+  --color-accent2: #f28706;
+} */
+
+/* Dark modek*/
+/* :root {
+  --color-primary1: #111;
+  --color-primary2: #222;
+  --color-secondary1: #eee;
+  --color-secondary2: rgb(133, 133, 133);
+  --color-accent1: #f24403;
+  --color-accent2: #ff8c00;
+} */
+
+/* Fonts */
+:root {
+  --font-display: "Calistoga", cursive;
+  --font-paragraph: "Poppins", sans-serif;
+}
+
+input[type="checkbox"] {
+  /* styling for input element */
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  /* styling for labels */
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 52px;
+  height: 27px;
+  background: var(--color-accent2);
+  float: right;
+  border-radius: 100px;
+  position: relative;
+}
+
+label:after {
+  /* styling for labels - on toggle */
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: var(--color-primary1);
+  border-radius: 90px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  /* conditional check while toggling */
+  background-color: var(--color-secondary2);
+}
+
+input:checked + label::after {
+  left: calc(100% - 5px);
+
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+label:active::after {
+  width: 45px;
+}
+
+body {
+  font-family: var(--font-paragraph);
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3 {
+  color: #111;
+  /* font-family: "Noto Serif Display", serif; */
+  font-family: var(--font-display);
+  color: var(--color-secondary2);
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 1.953rem;
+  line-height: 2.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  /* font-family: "Poppins", sans-serif; */
+  /* font-family: var(--font-paragraph); */
+}
+
+p {
+  /* color: #222; */
+  color: var(--color-secondary1);
+  /* font-family: "Poppins", sans-serif; */
+  font-family: var(--font-paragraph);
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  /* color: #222; */
+  color: var(--color-accent2);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* UI Elements */
+button {
+  display: inline-block;
+  height: 3rem;
+  padding: 1rem 2rem;
+  border: none;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  /* background-color: #222; */
+  background-color: var(--color-accent2);
+  /* color: #eee; */
+  color: var(--color-primary1);
+}
+
+.dark_button {
+  /* background-color: #000; */
+  background-color: var(--color-accent2);
+}
+
+input[type="text"] {
+  box-sizing: border-box;
+  width: 250px;
+  height: 3rem;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  text-align: left;
+  /* background-color: #eee; */
+  /* border-color: #ddd; */
+  /* color: #222; */
+  background-color: var(--color-primary2);
+  border-color: var(--color-primary1);
+  color: var(--color-secondary2);
+}
+
+/* Menu */
+nav {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: #111; */
+  background-color: var(--color-secondary1);
+}
+
+nav a {
+  /* color: white; */
+  color: var(--color-primary1);
+  text-decoration: none;
+}
+
+nav a.logo {
+  /* font-family: "Noto Serif Display", serif; */
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0px 1rem;
+}
+
+/* Header */
+header {
+  display: flex;
+  min-height: 80vh;
+  padding: 5rem;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  /* background-color: #222; */
+  background-color: var(--color-primary2);
+}
+
+header h1 {
+  /* color: #eee; */
+  color: var(--color-secondary1);
+}
+
+header p {
+  /* color: #ddd; */
+  color: var(--color-secondary1);
+}
+
+header button {
+  margin-bottom: 5rem;
+}
+
+.header_text {
+  width: 30vw;
+  min-width: 300px;
+}
+
+.header_graphics {
+  width: 30vw;
+  height: 30vw;
+  min-width: 300px;
+  min-height: 300px;
+  border-radius: 300px;
+  /* background-color: #111; */
+  background-color: var(--color-accent1);
+}
+
+/* product section */
+#product {
+  padding: 2rem;
+  /* background-color: #ddd; */
+  background-color: var(--color-primary2);
+}
+
+#product h3 {
+  font-size: 1.953rem;
+  line-height: 2.5rem;
+}
+
+#product article {
+  display: flex;
+  min-height: 50vh;
+  padding: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.product_text {
+  width: 50vw;
+  min-width: 300px;
+}
+
+.product_graphics {
+  width: 15vw;
+  height: 15vw;
+  min-width: 150px;
+  min-height: 150px;
+  margin: 3rem;
+  /* background-color: #ccc; */
+  background-color: var(--color-accent1);
+  border-radius: 300px;
+}
+
+/* highlight sections */
+.highlight {
+  display: flex;
+  min-height: 70vh;
+  padding: 2rem;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.highlight div {
+  width: 80vw;
+}
+
+.highlight div h2 {
+  font-size: 3.052rem;
+  line-height: 4rem;
+}
+
+.dark {
+  /* background-color: #222; */
+  background-color: var(--color-secondary1);
+}
+
+.dark h2 {
+  /* color: #eee; */
+  color: var(--color-primary2);
+}
+
+.dark a {
+  /* color: #ccc; */
+  color: var(--color-accent2);
+}
+
+/* request section */
+#request {
+  display: flex;
+  min-height: 50vh;
+  padding: 2rem;
+  align-items: center;
+  justify-content: space-around;
+  /* background-color: #ccc; */
+  background-color: var(--color-primary1);
+}
+
+#request div {
+  width: 50vw;
+  min-width: 450px;
+}
+
+/* Footer */
+footer {
+  display: flex;
+  padding: 5vh 2rem;
+  /* align-items: top; */
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* background-color: #111; */
+  /* color: #ddd; */
+  background-color: var(--color-secondary1);
+  color: var(--color-primary2);
+}
+
+footer h2,
+footer h3 {
+  /* color: #eee; */
+  color: var(--color-primary1);
+}
+
+footer a {
+  /* color: #ddd; */
+  color: var(--color-primary2);
+}
+
+footer section.left {
+  display: flex;
+  max-width: 50vw;
+  /* align-items: top; */
+  align-items: flex-start;
+
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+footer section div {
+  margin: 0px 1rem 1rem 1rem;
+}
