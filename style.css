@@ -17,6 +17,25 @@
   --color-accent2: #f28706;
 }
 
+.dark-mode{
+  --color-primary1: #111;
+  --color-primary2: #222;
+  --color-secondary1: #eee;
+  --color-secondary2: rgb(133, 133, 133);
+  --color-accent1: #f24403;
+  --color-accent2: #ff8c00;
+}
+/* @media (prefers-color-scheme: dark) {
+  :root {
+  --color-primary1: #111;
+  --color-primary2: #222;
+  --color-secondary1: #eee;
+  --color-secondary2: rgb(133, 133, 133);
+  --color-accent1: #f24403;
+  --color-accent2: #ff8c00;
+}
+} */
+
 /* Dark mode example 1*/
 /* :root {
   --color-primary1: #102c50;
@@ -28,14 +47,7 @@
 } */
 
 /* Dark modek*/
-/* :root {
-  --color-primary1: #111;
-  --color-primary2: #222;
-  --color-secondary1: #eee;
-  --color-secondary2: rgb(133, 133, 133);
-  --color-accent1: #f24403;
-  --color-accent2: #ff8c00;
-} */
+
 
 /* Fonts */
 :root {
